@@ -9,7 +9,7 @@ class Config:
     MAIL_PASSWORD = None
     MAIL_USE_TLS = False
     MAIL_USE_SSL = False
-    MAIL_SUPPRESS_SEND = False  # Suppress sending emails
+    MAIL_SUPPRESS_SEND = True  # Suppress sending emails
     MAIL_DEBUG = True          # Enable Flask-Mail debugging
     TESTING=os.getenv("DEBUG", False)
     DEBUG=os.getenv("DEBUG", False)

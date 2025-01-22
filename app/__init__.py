@@ -1,6 +1,6 @@
 from flask import Flask
-from .modules.email.utils import mail
-from .modules.email.routes import api as email_api
+from app.modules.email.utils import mail
+from app.modules.email.routes import api as email_api
 
 def create_app():
     app = Flask(__name__)
