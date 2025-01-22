@@ -3,7 +3,7 @@ def render_template(template: str, context: dict) -> str:
     Renders a template string with the given context.
 
     :param template: The template content with placeholders, e.g., "Hello {name}"
-    :param context: Dictionary of placeholder values, e.g., {"name": "Alex"}
+    :param context: Dictionary of placeholder values, e.g., {"name": "Test Name"}
     :return: Rendered template as a string
     """
     try:

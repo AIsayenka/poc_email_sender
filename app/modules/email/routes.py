@@ -48,9 +48,6 @@ def send_email_api():
                 print(f"Error sending email: {e}")
 
         print("EMAIL STATUSES: ", statuses)
-
-        
-        print("EMAIL STATUSES: ", statuses)
         
         return jsonify({"status": RequestStatus.SUBMITTED, "request_id": request_id}), 202
 
