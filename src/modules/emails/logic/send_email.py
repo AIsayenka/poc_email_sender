@@ -1,8 +1,8 @@
 from flask_mail import Message
-from app.modules.email.utils import mail
+from src.modules.emails.utils import mail
 import random
 import os
-from app.modules.email.enums.email_status import EmailStatus
+from src.modules.emails.enums.email_status import EmailStatus
 
 def send_email(id, recipient, body, retry= 0):
     if retry > int(os.getenv("MAX_RETRIES", 3)):

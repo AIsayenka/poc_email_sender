@@ -1,10 +1,10 @@
 from flask import Blueprint, request, jsonify
-from app.modules.email.logic.send_email_task import send_email_task
-from app.modules.email.logic.render_template import render_template
+from src.modules.emails.logic.send_email_task import send_email_task
+from src.modules.emails.logic.render_template import render_template
 import uuid
 import os
-from app.modules.email.enums.request_status import RequestStatus
-from app.modules.email.enums.email_status import EmailStatus
+from src.modules.emails.enums.request_status import RequestStatus
+from src.modules.emails.enums.email_status import EmailStatus
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from flask import current_app
 

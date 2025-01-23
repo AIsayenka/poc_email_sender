@@ -1,5 +1,5 @@
-from app.modules.email.logic.send_email import send_email
-from app.modules.email.enums.email_status import EmailStatus
+from src.modules.emails.logic.send_email import send_email
+from src.modules.emails.enums.email_status import EmailStatus
 
 from flask import current_app
 
