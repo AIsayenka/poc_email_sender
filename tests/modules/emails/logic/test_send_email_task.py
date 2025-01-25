@@ -16,7 +16,7 @@ def test_app():
     app.config["MAIL_PORT"] = 8025
     app.config["MAIL_DEFAULT_SENDER"] = "test123@test.com"
     app.config["MAIL_SUPPRESS_SEND"] = True  # Suppresses email sending
-    app.config["MAIL_DEBUG"] = 1
+    # app.config["MAIL_DEBUG"] = 1
     
     # Initialize Flask-Mail with the app
     mail = Mail(app)
@@ -55,7 +55,7 @@ def test_send_email_task_failure(test_app):
     with test_app.app_context():
         # Patch send_email to simulate a failure
         with pytest.MonkeyPatch().context() as mp:
-            mp.setattr("src.modules.emails.logic.send_email.send_email", failing_send_email)
+            mp.setattr("src.modules.emails.logic.send_email_task.send_email", failing_send_email)
             result = send_email_task(email_id, recipient, body)
 
             # Assert that the task marks the email as failed
